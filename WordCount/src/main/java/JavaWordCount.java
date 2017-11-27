@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -50,7 +51,7 @@ public class JavaWordCount {
     );
     
     // count characters
-    JavaPairRDD<Character, Integer> charCounts = filtered.flatMap(
+    /*JavaPairRDD<Character, Integer> charCounts = filtered.flatMap(
       new FlatMapFunction<Tuple2<String, Integer>, Character>() {
         @Override
         public Iterable<Character> call(Tuple2<String, Integer> s) {
@@ -75,8 +76,8 @@ public class JavaWordCount {
           return i1 + i2;
         }
       }
-    );
+    );*/
     
-    System.out.println(charCounts.collect());
+    System.out.println(filtered.collect());
   }
 }
