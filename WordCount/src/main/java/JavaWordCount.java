@@ -18,7 +18,7 @@ public class JavaWordCount {
       new FlatMapFunction<String, String>() {
         @Override
         public Iterable<String> call(String s) {
-          return Arrays.asList(s.split(" "));
+          return Arrays.asList(s.split(",|.| "));
         }
       }
     );
