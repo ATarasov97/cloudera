@@ -13,7 +13,6 @@ import org.apache.spark.sql.Encoders;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 import org.apache.spark.api.java.function.FlatMapFunction;
-import org.apache.spark.sql.Data
 
 
 public class InnGenerator {
