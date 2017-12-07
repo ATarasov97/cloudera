@@ -75,9 +75,7 @@ public class InnGenerator {
         Dataset<Row> sqlDF = spark.sql("SELECT key, value FROM src WHERE key < 10 ORDER BY key");
 
         // The items in DataFrames are of type Row, which lets you to access each column by ordinal.
-        Dataset<String> stringsDS = sqlDF.map(
-                (MapFunction<Row, String>) row -> "Key: " + row.get(0) + ", Value: " + row.get(1),
-                Encoders.STRING());
+        Dataset<String> stringsDS = sqlDF.map((MapFunction<Row, String>) row -> "Key: " + row.get(0) + ", Value: " + row.get(1), Encoders.STRING());
         stringsDS.show();
         // +--------------------+
         // |               value|
