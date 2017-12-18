@@ -7,36 +7,38 @@
     <version>0.0.2</version>
     <repositories>
         <repository>
-            <id>Akka repository</id>
-            <url>http://repo.akka.io/releases</url>
+            <id>scala-tools.org</id>
+            <name>Scala-tools Maven2 Repository</name>
+            <url>http://scala-tools.org/repo-releases</url>
         </repository>
         <repository>
-            <id>scala-tools</id>
-            <url>https://oss.sonatype.org/content/groups/scala-tools</url>
+            <id>maven-hadoop</id>
+            <name>Hadoop Releases</name>
+            <url>https://repository.cloudera.com/content/repositories/releases/</url>
         </repository>
         <repository>
-            <id>apache</id>
-            <url>https://repository.apache.org/content/repositories/releases</url>
-        </repository>
-        <repository>
-            <id>twitter</id>
-            <url>http://maven.twttr.com/</url>
-        </repository>
-        <repository>
-            <id>central2</id>
-            <url>http://central.maven.org/maven2/</url>
+            <id>cloudera-repos</id>
+            <name>Cloudera Repos</name>
+            <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
         </repository>
     </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>scala-tools.org</id>
+            <name>Scala-tools Maven2 Repository</name>
+            <url>http://scala-tools.org/repo-releases</url>
+        </pluginRepository>
+    </pluginRepositories>
     <dependencies>
         <dependency> <!-- Spark dependency -->
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-hive_2.10</artifactId>
+            <artifactId>spark-hive_2.11</artifactId>
             <version>2.2.1</version>
             <scope>provided</scope>
         </dependency>
         <dependency> <!-- Spark dependency -->
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-streaming_2.10</artifactId>
+            <artifactId>spark-streaming_2.11</artifactId>
             <version>2.2.1</version>
         </dependency>
         <dependency> <!-- Elastic search connector -->
