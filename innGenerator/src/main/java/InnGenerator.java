@@ -117,4 +117,4 @@ public class InnGenerator {
 
         spark.stop();
     }
-}}
+}
