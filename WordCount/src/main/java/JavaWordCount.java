@@ -19,7 +19,7 @@ public class JavaWordCount {
                 new FlatMapFunction<String, String>() {
                     @Override
                     public Iterable<String> call(String s) {
-                        return Arrays.asList(s.split("[,|\\.|\\s|\\-|!|?|&|#|:|;|\\t|||@|\"|$|%|^|*|(|)|_|+|=|'|<|>|\\[|\\]|{|}|`|~|\\\\|/]+"));
+                        return Arrays.asList(s.split("[”|,|\\.|\\s|\\-|!|?|&|#|:|;|\\t|||@|\"|$|%|^|*|(|)|_|+|=|'|<|>|\\[|\\]|{|}|`|~|\\\\|/]+"));
                     }
                 }
         );
@@ -29,7 +29,7 @@ public class JavaWordCount {
                 new PairFunction<String, String, Integer>() {
                     @Override
                     public Tuple2<String, Integer> call(String s) {
-                        return new Tuple2<String, Integer>(s, 1);
+                        return new Tuple2<String, Integer>(s.toLowerCase(), 1);
                     }
                 }
         ).reduceByKey(
