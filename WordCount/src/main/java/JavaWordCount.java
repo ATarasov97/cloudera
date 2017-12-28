@@ -59,7 +59,7 @@ public class JavaWordCount {
 
         });
 
-        final JavaPairRDD<Integer, String> sorted = swappedPair.sortByKey();
+        final JavaPairRDD<Integer, String> sorted = swappedPair.sortByKey(false);
         // count characters
     /*JavaPairRDD<Character, Integer> charCounts = filtered.flatMap(
       new FlatMapFunction<Tuple2<String, Integer>, Character>() {
